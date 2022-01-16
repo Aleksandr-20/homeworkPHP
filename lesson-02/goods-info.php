@@ -45,7 +45,7 @@ $items = [
 
     <main>
         <section class="goods-info">
-        <h2>Все товары</h2>
+        <h2>All goods</h2>
 
             <?php foreach ($items as $item): ?>
                 <div class="good-card">
@@ -53,9 +53,9 @@ $items = [
                     <p><?= $item['price'] ?></p>
                     <img height="300" src="/img/<?= $item['img'] ?>" alt="<?= $item['title'] ?>">
                     <div>
-                        <h4>Описание:</h4>
-                        <span>Цвет: <?= $item['description']['color'] ?></span><br>
-                        <span>Материал: <?= $item['description']['material'] ?></span>
+                        <h4>Description:</h4>
+                        <span>Color: <?= $item['description']['color'] ?></span><br>
+                        <span>Material: <?= $item['description']['material'] ?></span>
                     </div>
                 </div>
             <?php endforeach; ?>   
