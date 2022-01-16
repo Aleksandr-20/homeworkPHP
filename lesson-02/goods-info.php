@@ -44,7 +44,7 @@ $items = [
 <body>
 
     <main>
-		<section class="goods-info">
+        <section class="goods-info">
         <h2>Все товары</h2>
 
             <?php foreach ($items as $item): ?>
