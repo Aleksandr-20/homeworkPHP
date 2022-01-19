@@ -37,4 +37,10 @@ input[type="submit"] {
 	background: rgb(165, 34, 78);
 	border: none;
     border-radius: 5px;
+    font-size: 1rem;
+}
+
+input[type="submit"]:hover {
+    opacity: 0.8;
+    cursor: pointer;
 }

@@ -13,6 +13,3 @@ if ($server['REQUEST_METHOD'] === 'POST') {
         echo 'FAIL';
     }
 }
-
-?>
-        
