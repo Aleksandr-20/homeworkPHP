@@ -1,0 +1,43 @@
+body {
+    background-color:rgb(192, 243, 226);
+    margin: 1rem 3rem;
+}
+
+.goods {
+    display: flex;
+    margin: 0 3rem;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.good-card {
+    width: 40%;
+    height: auto;
+    /* text-align: center; */
+}
+
+.good-card img {
+    width: 80%;
+    height: 60vh;
+    display: block;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    text-align: center;
+    color: rgb(46, 4, 4);
+}
+
+.not-available {
+    font-style: italic;
+}
+
+.more {
+    text-decoration: none;
+    color:rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+.price, .more, .not-available {
+    padding-left: 3rem;
+}
