@@ -6,10 +6,10 @@ if ($server['REQUEST_METHOD'] === 'POST') {
     $post = $_POST;
 
     if ($post['login'] === 'qwe' && $post['password'] === '123') {
-        // return true;
+        // return 1;
         echo 'SUCCESS';
     } else {
-        // return false;
+        // return 0;
         echo 'FAIL';
     }
 }

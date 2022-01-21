@@ -6,7 +6,7 @@ session_start();
 
 $_SESSION['time'] = time();
 
-if ($_SESSION['time'] < time() + 600000){
+if ($_SESSION['time'] < time() + 600000){ // (time() - $_SESSION['time'] > 600000)
     session_regenerate_id();   
     $_SESSION['time'] = time();
 }
