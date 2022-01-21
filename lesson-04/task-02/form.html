@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/form.css">
+    <title>ДЗ к занятию 4 задача 2</title>
+</head>
+<body>
+    <header>
+		<nav class="menu__box">
+			<a class="menu__item" href="form.html">Главная</a>
+			<a class="menu__item" id="personal" href="#">Личный кабинет</a>
+			<a class="menu__item" href="#">Контакты</a>
+		</nav>
+    </header>
+
+    <section id="myModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Авторизация</h2>
+            </div>
+
+            <form>
+                <input type="text" name="login" placeholder="логин" />
+                <input type="password" name="password" placeholder="пароль" />
+                <input type="submit" value="Войти" name="enter" />
+            </form>
+
+            <span id="message" class="hidden">Ошибка авторизации</span>
+           
+        </div>
+        
+    </section>
+    
+    <script src="js/form.js"></script>
+</body>
+</html>
