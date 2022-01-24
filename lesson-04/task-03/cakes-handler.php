@@ -9,11 +9,14 @@ if (!isset($id)) {
 function getCake(int $id) {
     $cakes = require_once 'cakes-data.php';
     foreach ($cakes as $cake){
-        if ($id === $cake['id']) echo $cake;
+        if ($id === $cake['id']) {
+            echo $cake;
+        }
     }
 }
 
 $cake = getCake($id);
+
 if (!isset($cake)) {
     header("Location: cakes.php");
 }

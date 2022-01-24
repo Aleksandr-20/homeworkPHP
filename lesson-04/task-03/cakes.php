@@ -25,31 +25,7 @@ $cakes = require_once 'cakes-data.php';
     </div>
     <? endforeach; ?>
 
-    <section id="myModal" class="modal">
-        <div class="modal-content">
-
-            <div class="modal-header">
-                <span class="close">&times;</span>
-                <h2><?= $cake['name'] ?></h2>
-            </div>
-
-            <div class="info">
-                <p><?= $cake['description'] ?></p>
-                <p>Стоимость: <?= $cake['price'] . $cake['currency'] ?></p>
-                <!-- <div class="img">
-                    <img src="/images/<?= $cake['main_img']?>">
-                </div> -->
-                <div class="imgs">
-                    <? foreach ($cake['imgs'] as $img): ?>
-                    <img src="/images/<?= $img?>">
-                    <? endforeach; ?>
-                </div>
-                <div class="buy">
-                    <a href="#">Заказать</a>
-                </div>
-            </div>
-           
-        </div>
+    <section id="myModal">
         
     </section>
     <script src="js/cakes.js"></script>
