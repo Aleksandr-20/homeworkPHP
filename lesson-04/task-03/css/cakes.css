@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333333;
+}
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.cake {
+    padding: 1rem;
+    box-shadow: 0 7px 14px rgba(0,0,0,0.25), 0 5px 5px rgba(0,0,0,0.22);
+}
+.cake > div {
+    overflow: hidden;
+}
+.cake img:hover {
+    transform: scale(1.5);
+    transition: transform 2s;
+}
+.cake a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #333333;
+    border: 1px solid rgba(0,0,0,0.15);
+}
+.cake a:hover {
+    background: rgba(0,0,0,0.15);
+    transition: background-color 2s;
+}
+
+.info {
+    color:rgb(7, 81, 131);
+    padding: .5rem;
+    background-color: rgb(180, 135, 243);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.22);
+    border-radius: 5px;
+    /* position: relative; */
+    width: 90%;
+    margin: 1rem auto;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: .5rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: scroll; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    /* display: block; */
+    position: relative;
+    background-color: #E1BEE7;
+    margin: auto;
+    padding: 0;
+    border: 5px solid #7B1FA2;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #9C27B0;
+    color: white;
+}
+
+.close {
+    color: white;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.imgs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.imgs > img {
+    width: 30%;
+    height: auto;
+}
+.buy {
+    margin: 1rem 0 .5rem;
+    text-align: center;
+}
+
+.buy a {
+    text-decoration: none;
+    padding: .5rem;
+    background-color: rgb(227, 137, 235);
+    border-radius: 5px;
+    cursor: pointer;
+}
