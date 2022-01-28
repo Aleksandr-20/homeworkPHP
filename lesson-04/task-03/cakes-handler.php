@@ -8,11 +8,13 @@ if (!isset($id)) {
 
 function getCake(int $id) {
     $cakes = require_once 'cakes-data.php';
+
     foreach ($cakes as $cake){
         if ($id === $cake['id']) {
             echo json_encode($cake);
         }
     }
+    
 }
 
 $cake = getCake($id);

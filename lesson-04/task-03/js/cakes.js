@@ -36,6 +36,7 @@ openModal.forEach(element => {
                                 <a href="#">Заказать</a>
                             </div>
                         </div>
+                        
                     </div>`;
                 
                 let closeModal = document.getElementsByClassName("close")[0];
