@@ -1,7 +1,9 @@
 <?php
 
 $files = $_FILES;
+// echo "<pre>";
 // var_dump($files);
+// echo "</pre>";
 
 if( isset($files['pictures']['name'])) {
     $total_files = count($_FILES['pictures']['name']);
@@ -21,7 +23,7 @@ function checkType($type) {
 
 // проверка на соответствие размеру
 function checkSize($size) {
-    $maxFileSize = 5 * 1024 * 1024; //5MB
+    $maxFileSize = 3 * 1024 * 1024; //3MB
     if ($size < $maxFileSize){
         return true;
     } else {
@@ -30,8 +32,6 @@ function checkSize($size) {
 }
 
 // проверка на наличие ошибок загрузки
-// $files['pictures']['error'] as $key => $error
-
 function checkError($error) {
     if ($error === 0) {
         return true;
@@ -58,9 +58,23 @@ for($key = 0; $key < $total_files; $key++) {
                 echo "$file_name успешно загружен";
                 echo "</pre>";
             } else {
+                echo "<pre>";
                 echo "$file_name не был загружен";
+                echo "</pre>";
             }
-        }
+    } elseif (!checkType($type)) {
+        echo "<pre>";
+        echo "$file_name имеет не верный тип. Файл не был загружен";
+        echo "</pre>";
+    } elseif (!checkSize($size)) {
+        echo "<pre>";
+        echo "Превышен размер файла $file_name. Файл не был загружен";
+        echo "</pre>";
+    } else {
+        echo "<pre>";
+        echo "$file_name не был загружен из-за ошибки сервера";
+        echo "</pre>";
+    }
 }
 
 

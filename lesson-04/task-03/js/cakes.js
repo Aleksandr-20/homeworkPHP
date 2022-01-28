@@ -15,7 +15,7 @@ openModal.forEach(element => {
         let idCake = event.target.id;
         console.log(idCake);
         fetch(`cakes-handler.php?id=${idCake}`)
-            .then(response => response.text())
+            .then(response => response.json())
             .then(element => {
                 modal.style.display = "block";
                 modal.innerHTML = `
