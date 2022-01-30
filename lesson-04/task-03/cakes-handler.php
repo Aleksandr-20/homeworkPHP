@@ -11,14 +11,10 @@ function getCake(int $id) {
 
     foreach ($cakes as $cake){
         if ($id === $cake['id']) {
-            echo json_encode($cake);
+            return $cake;
         }
     }
-    
+    return [];
 }
 
-$cake = getCake($id);
-
-if (!isset($cake)) {
-    header("Location: cakes.php");
-}
+echo json_encode(getCake($id));

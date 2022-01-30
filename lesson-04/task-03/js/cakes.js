@@ -13,7 +13,7 @@ openModal.forEach(element => {
     element.addEventListener('click', function (event){
         event.preventDefault();
         let idCake = event.target.id;
-        console.log(idCake);
+        // console.log(idCake);
         fetch(`cakes-handler.php?id=${idCake}`)
             .then(response => response.json())
             .then(element => {

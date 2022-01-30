@@ -28,6 +28,7 @@ $cakes = require_once 'cakes-data.php';
     <section id="myModal">
         
     </section>
+    
     <script src="js/cakes.js"></script>
 </main>
 </body>

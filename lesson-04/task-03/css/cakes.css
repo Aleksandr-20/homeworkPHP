@@ -72,12 +72,12 @@ img {
     margin: auto;
     padding: 0;
     border: 5px solid #7B1FA2;
-    width: 90%;
+    width: 70%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 .modal-header {
-    padding: 2px 16px;
+    padding: .5rem 1rem;
     background-color: #9C27B0;
     color: white;
 }
@@ -106,6 +106,18 @@ img {
     width: 30%;
     height: auto;
 }
+
+.info img {
+    width: 50%;
+    /* text-align: center; */
+    margin: 0 auto;
+    display: block;
+}
+
+.info {
+    padding: .4rem 1rem;
+}
+
 .buy {
     margin: 1rem 0 .5rem;
     text-align: center;
