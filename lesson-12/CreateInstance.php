@@ -19,7 +19,7 @@ class CreateInstance {
                 $command->execute();
             }
         } else {
-            echo 'Команда $argv[1] не определена';
+            echo 'Команда $argv[1] не определена!';
         }
     }
 

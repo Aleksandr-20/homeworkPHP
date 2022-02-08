@@ -12,7 +12,7 @@ class CreatePassword implements InterfaceCommand {
     {
         var password = "";
         var symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!№;%:?*()_+=";
-        for (var i = 0; i < 8; i++){
+        for (var i = 0; i < 8; i++) {
             password += symbols.charAt(Math.floor(Math.random() * symbols.length));     
         }
         // return password;
@@ -21,7 +21,7 @@ class CreatePassword implements InterfaceCommand {
 
     public function help()
     {
-        echo 'Генерирует пароль';
+        return 'Генерирует пароль';
     }
 
 }

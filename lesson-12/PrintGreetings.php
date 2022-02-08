@@ -15,7 +15,7 @@ class PrintGreetings implements InterfaceCommand {
 
     public function help()
     {
-        echo 'Выводит приветствие';
+        return 'Выводит приветствие';
     }
 
 }
