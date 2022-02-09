@@ -10,13 +10,14 @@ class CreatePassword implements InterfaceCommand {
 
     public function execute()
     {
-        var password = "";
-        var symbols = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!№;%:?*()_+=";
-        for (var i = 0; i < 8; i++) {
-            password += symbols.charAt(Math.floor(Math.random() * symbols.length));     
+        $alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890';
+        $pass = array();
+        $alphaLength = strlen($alphabet) - 1; // put the length -1 in cache
+        for ($i = 0; $i < 8; $i++) {
+            $n = rand(0, $alphaLength);
+            $pass[] = $alphabet[$n];
         }
-        // return password;
-        echo password;
+        echo implode($pass); // turn the array into a string
     }
 
     public function help()

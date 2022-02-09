@@ -4,8 +4,11 @@
 
 require_once 'CreateInstance.php';
 
-$app = new CreateInstance();
-$app->run();
+// название файла с командами в виде строки
+$commands = 'commands.php';
+
+$app = new CreateInstance($commands);
+$app->run($argv);
 
 /*
 echo $argv[0];
