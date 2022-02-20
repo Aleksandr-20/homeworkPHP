@@ -9,21 +9,23 @@ $password = $post['password'];
 
 if (file_exists(USER_REG)) {
     $arr_from_file = file(USER_REG, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
-    // перебираем массив, каждый элемент разбиваем по пробелу
+    // перебираем массив, каждый элемент разбиваем по пробелу,
     // получаем логин по индексу 0 и пароль по индексу 1
-    // и сразу сравниваем их
+    // И сразу сравниваете их
+    
+    $logins = array();
 
     foreach ($arr_from_file as $value) {
         $value = explode(" ", $value);
-        
-        if ($value[0] === $login) {
-            echo 'Такой логин уже существует. Придумайте другой';
-            exit();
-        } 
+        array_push($logins, $value[0]);
     }
 
-    if (file_put_contents(USER_REG, $login . ' ' . $password . PHP_EOL, LOCK_EX | FILE_APPEND) !== false){
-        echo 'Данные успешно записаны';
+    if (in_array($login, $logins)) {
+        echo 'Такой логин уже существует. Придумайте другой';
+    } else {
+        if (file_put_contents(USER_REG, $login . ' ' . $password . PHP_EOL, LOCK_EX | FILE_APPEND) !== false){
+            echo 'Данные успешно записаны';
+        }
     }
 
 } else {
