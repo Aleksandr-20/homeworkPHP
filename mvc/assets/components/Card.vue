@@ -6,7 +6,6 @@
     <router-link :to="'/cakes/' + object.id">Подробнее</router-link>
   </div>
 </template>
-
 <script>
 export default {
   props: {

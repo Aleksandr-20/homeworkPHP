@@ -1,12 +1,10 @@
 <template>
   <div v-for="cake in cakes" :key="cake.title">
-
     <input type="text" disabled v-model="cake.title">
     <input type="number" placeholder="цена торта" v-model="cake.price">
     <input type="text" placeholder="описание торта" v-model="cake.description">
     <input type="file" name="image" accept="image/*" v-on:change="handleFileUpload()">
     <input type="button" value="Изменить" @click="changeCake(cake.title, cake.price, cake.description, cake.image)">
-  
   </div>
 </template>
 

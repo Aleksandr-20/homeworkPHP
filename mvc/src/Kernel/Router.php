@@ -21,7 +21,7 @@ class Router
                 return;
             }
         }
-        // echo "dcdsc";
+//        echo "dcdsc";
 //        $obj = new ErrorController();
 //        $obj->error404();
     }

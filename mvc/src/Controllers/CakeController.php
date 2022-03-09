@@ -1,5 +1,4 @@
 <?php
-
 namespace Cakes\Controllers;
 
 use Cakes\Db\CakesDb;

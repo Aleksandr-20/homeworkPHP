@@ -5,7 +5,7 @@ use Cakes\Kernel\Controller;
 
 class IndexController extends Controller
 {
-    public function index(){
+    public function index() {
         echo $this->getIndex();
     }
 }

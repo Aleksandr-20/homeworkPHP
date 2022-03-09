@@ -8,7 +8,6 @@
     <input type="file" accept="image/*">
     <input type="submit" value="Добавить">
   </form>
-
 </template>
 
 <script>
@@ -22,7 +21,6 @@ export default {
         description: "",
         image: ""
       },
-      
       answer: ""
     }
   },

@@ -1,8 +1,5 @@
 <?php
-
-
 namespace Cakes\Kernel;
-
 
 use PDO;
 
@@ -27,12 +24,12 @@ class DBConnection
 
     private function __clone() {}
 
-    public static function getInstance($settings = 'db.php'){
+    public static function getInstance($settings = 'db.php') {
         if (self::$instance == null) self::$instance = new DbConnection($settings);
         return self::$instance;
     }
 
-    public function getConnection(){
+    public function getConnection() {
         return $this->connection;
     }
 

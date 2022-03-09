@@ -1,4 +1,5 @@
 <?php
+
 return [
     'server' => 'localhost',
     'port' => '3306',

@@ -18,7 +18,8 @@ class FileHandler
         $file_name = microtime() . self::$image['name'];
         $ext = pathinfo($file_name, PATHINFO_EXTENSION);
         $file_name = md5(microtime() . $file_name) . ".$ext";
-        if (move_uploaded_file($tmp_name, '../images/' . $file_name)) return $file_name;
+        if (move_uploaded_file($tmp_name, '../images/' . $file_name))
+        return $file_name;
         else return false;
     }
 }
